@@ -1,0 +1,127 @@
+:root {
+  color-scheme: light dark;
+  --bg: #0f172a;
+  --panel: #111827;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --accent: #22c55e;
+  --danger: #ef4444;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  background: radial-gradient(circle at top, #1f2937, var(--bg));
+  color: var(--text);
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+}
+
+.app {
+  width: min(720px, 100%);
+  background: color-mix(in oklab, var(--panel) 90%, black 10%);
+  border: 1px solid #1f2937;
+  border-radius: 14px;
+  padding: 1.25rem;
+  box-shadow: 0 10px 30px rgb(0 0 0 / 0.25);
+}
+
+h1,
+h2 {
+  margin: 0;
+}
+
+.subtitle {
+  color: var(--muted);
+  margin-top: 0.25rem;
+}
+
+.memory-form {
+  display: grid;
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+
+textarea {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #334155;
+  background: #0b1220;
+  color: var(--text);
+  padding: 0.75rem;
+  resize: vertical;
+}
+
+.actions {
+  display: flex;
+  gap: 0.6rem;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  padding: 0.55rem 0.8rem;
+  background: var(--accent);
+  color: #052e16;
+  font-weight: 600;
+}
+
+button.ghost {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid #334155;
+}
+
+.memory-list-section {
+  margin-top: 1rem;
+}
+
+.memory-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.75rem 0 0;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.memory-list li {
+  border: 1px solid #334155;
+  border-radius: 10px;
+  padding: 0.7rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.8rem;
+  align-items: flex-start;
+  background: #0b1220;
+}
+
+.memory-list p {
+  margin: 0;
+  white-space: pre-wrap;
+}
+
+.memory-list time {
+  display: block;
+  margin-top: 0.4rem;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.delete {
+  background: transparent;
+  color: var(--danger);
+  border: 1px solid color-mix(in oklab, var(--danger) 70%, black 30%);
+  padding: 0.35rem 0.55rem;
+}
+
+.empty-state {
+  color: var(--muted);
+  margin: 0.65rem 0 0;
+}
