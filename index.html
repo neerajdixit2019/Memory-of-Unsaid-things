@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memory of Unsaid Things</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <h1>Memory of Unsaid Things</h1>
+      <p class="subtitle">Capture thoughts you never said out loud.</p>
+
+      <form id="memory-form" class="memory-form">
+        <label for="memory-input">What are you carrying?</label>
+        <textarea
+          id="memory-input"
+          name="memory"
+          rows="4"
+          maxlength="280"
+          placeholder="Type an unsaid thought..."
+          required
+        ></textarea>
+        <div class="actions">
+          <button type="submit">Save memory</button>
+          <button type="button" id="clear-all" class="ghost">Clear all</button>
+        </div>
+      </form>
+
+      <section class="memory-list-section">
+        <h2>Saved memories</h2>
+        <p id="empty-state" class="empty-state">No memories yet.</p>
+        <ul id="memory-list" class="memory-list" aria-live="polite"></ul>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
